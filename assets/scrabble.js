@@ -24,9 +24,11 @@ var scrabblePoints = [1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 
 function getScrabblePointsOfLetter(letter){
 
   // Make letter uppercased to match the values in the scrabbleLetters array.
-
+  l = letter.toUpperCase(letter);
   // Get the index of the letter
-
+  i = scrabbleLetters.indexOf(l);
   // Look up the points in the matching points array
+  p = scrabblePoints[i];
 
+  return(p);
 }
