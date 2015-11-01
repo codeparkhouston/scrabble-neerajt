@@ -1,5 +1,5 @@
 // Fill in this array with whatever words you want!
-var myWords = [];
+var myWords = ["Cricket", "Beetle", "Dragonfly"];
 
 myWords.forEach(function(word){
   var wordPoints = calculateScrabblePoints(word);
