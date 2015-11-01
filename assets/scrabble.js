@@ -1,5 +1,5 @@
 // Fill in this array with whatever words you want!
-var myWords = [];
+var myWords = ["Cricket", "Beetle", "Dragonfly"];
 
 myWords.forEach(function(word){
   var wordPoints = calculateScrabblePoints(word);
@@ -11,7 +11,12 @@ myWords.forEach(function(word){
  * calculateScrabblePoints should take a word and return the scrabble points of the word.
  */
 function calculateScrabblePoints(word){
-
+  points = 0
+  letters =  word.split('');
+  letters.forEach(function(letter){
+    points =  points + getScrabblePointsOfLetter(letter);
+  })
+  return(points);
 }
 
 
@@ -24,9 +29,11 @@ var scrabblePoints = [1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 
 function getScrabblePointsOfLetter(letter){
 
   // Make letter uppercased to match the values in the scrabbleLetters array.
-
+  l = letter.toUpperCase(letter);
   // Get the index of the letter
-
+  i = scrabbleLetters.indexOf(l);
   // Look up the points in the matching points array
+  p = scrabblePoints[i];
 
+  return(p);
 }
