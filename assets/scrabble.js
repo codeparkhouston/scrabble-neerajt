@@ -11,7 +11,12 @@ myWords.forEach(function(word){
  * calculateScrabblePoints should take a word and return the scrabble points of the word.
  */
 function calculateScrabblePoints(word){
-
+  points = 0
+  letters =  word.split('');
+  letters.forEach(function(letter){
+    points =  points + getScrabblePointsOfLetter(letter);
+  })
+  return(points);
 }
 
 
